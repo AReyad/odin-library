@@ -6,6 +6,38 @@
     <title>Library</title>
 </head>
 <body>
+    <main>
+        <h1>Library</h1>
+        <button command="show-modal" commandfor="book-dialog">New Book</button>
+        <dialog id="book-dialog">
+            <form id="book-form">
+                <div class="field">
+                    <label for="book-title">Book title:</label>
+                    <input type="text" name="book-title" id="book-title" placeholder="" minlength="5" maxlength="35" required>
+                </div>
+                <div class="field">
+                    <label for="book-author">Book author:</label>
+                    <input type="text" name="book-author" id="book-author" placeholder="" minlength="3" maxlength="35" required>
+                </div>
+                <div class="field">
+                    <label for="book-pages">Book pages:</label>
+                    <input type="number" name="book-pages" id="book-pages" placeholder="" min="1" max="1500" required>
+                </div>
+                <div class="field">
+                    <label for="book-publish-year">Book publish year:</label>
+                    <input type="number" name="book-publish-year" id="book-publish-year" placeholder="" min="1500" max="2026" required>
+                </div>
+                <div class="field">
+                    <label for="book-status">Read the book?</label>
+                    <input type="checkbox" name="book-status" id="book-status">
+                </div>
+                <button>Add Book</button>
+            </form>
+            <button command="close" commandfor="book-dialog">Close</button>
+        </dialog>
+        <section class="books"></section>
+    </main>
     
+    <script src="script.js"></script>
 </body>
 </html>
